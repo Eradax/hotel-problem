@@ -85,15 +85,28 @@ operator*(const pair<T, U> l, const int m) {
 }
 
 
-const int MAL = 100;
-const int MIL = 0;
+const int MAL = 2000;
 
 using bs = bitset<MAL>;
 
 signed main() {
     // fast();
+    
+    int lo, hi;
 
-    repp(l, MIL, MAL + 1) {
+    cout << "Enter a lowerbound: ";
+    cin >> lo;
+    cout << "\n";
+
+    cout << "Enter an upperbound: ";
+    cin >> hi;
+    cout << "\n";
+
+    assert(0 <= lo);
+    assert(lo <= hi);
+    assert(hi <= MAL);
+
+    repp(l, lo, hi + 1) {
         resettimer();
 
         bs m;
