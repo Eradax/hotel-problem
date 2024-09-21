@@ -6,3 +6,7 @@ You are the host of a hotel with `n` rooms numbered from 1 to `n`. In your hotel
 ## The Problem
 What is the minimum number of rooms you have to check until you are guaranteed  to have found the guest?
 
+## Time complexity
+A naive analysis of `hotel_brute.cpp` will give a time complexity of `O(n^2 * 2^n)`, although I conjecture that the time complexity is closer to `O(n^2 * nlgn)` because some states are unreachable.
+
+For `hotel_test.cpp` you can easily show that it will have a time complexity of `O(n^3)`.
